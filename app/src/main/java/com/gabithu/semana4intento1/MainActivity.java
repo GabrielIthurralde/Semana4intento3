@@ -1,11 +1,14 @@
 package com.gabithu.semana4intento1;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 
 import java.util.ArrayList;
@@ -69,6 +72,32 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        return super.onCreateOptionsMenu(menu);
+        getMenuInflater().inflate(R.menu.menu_opciones, menu);
+        return true;
+
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        switch (item.getItemId()){
+            case R.id.mContacto:
+                Intent intent = new Intent(this, FormularioContacto.class);
+                startActivity(intent);
+                break;
+
+            case R.id.mAcerca_de:
+                Intent i = new Intent(this, AcercaDe.class);
+                startActivity(i)
+                break;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }
 

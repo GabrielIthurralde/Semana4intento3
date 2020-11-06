@@ -2,4 +2,10 @@
     <string name="app_name">MisMascotas</string>
     <string name="nombre">ShinShan</string>
     <string name="megusta">5huesitos</string>
+    <string name="menu_contacto">Contacto</string>
+    <string name="menu_acercade">Acerca_de</string>
+    <string name="texto_contacto">Contacto</string>
+    <string name="texto_acercade">Acerca_de</string>
+
+
 </resources>
